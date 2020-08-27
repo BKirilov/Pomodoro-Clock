@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #130f40;
+  background-image: url(./cool-background.png);
   color: #fff;
   display: flex;
   align-items: center;
@@ -22,6 +22,7 @@ button {
   font-size: 20px;
   padding: 10px 15px;
   margin: 10px;
+  outline: none;
 }
 
 .flex {
@@ -33,6 +34,10 @@ button {
 .timer-container {
   margin: auto;
   border: 1px solid white;
+}
+
+.timer-container:first-child {
+  border-right: none;
 }
 
 .timer-container h2 {
@@ -67,7 +72,20 @@ footer {
   font-weight: 500;
 }
 
+@media (max-width: 1200px) {
+  body {
+    background-size: contain;
+  }
+}
+
 @media (max-width: 520px) {
+  body {
+    background-position: center;
+    background-size: contain;
+    background-color: rgba(255, 255, 255, 0.125);
+    background-blend-mode: lighten;
+  }
+
   .clock-container {
     width: 250px;
   }
